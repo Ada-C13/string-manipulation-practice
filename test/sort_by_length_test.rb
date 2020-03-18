@@ -16,4 +16,12 @@ describe "sort_by_length" do
   it "will return an array of words by length, words that are of equal length will appear in the order they appear" do
     expect(sort_by_length("I love great awesome words")).must_equal ["I", "love", "great", "words", "awesome"]
   end
+
+  it "will return an array of words by length, words that are of equal length will appear in the order they appear" do
+    expect(sort_by_length("This is a test")).must_equal ["a", "is", "This", "test"]
+  end
+
+  it "will return an array of words by length, words that are of equal length will appear in the order they appear" do
+    expect(sort_by_length("This is a test to see if this works")).must_equal ["a", "is", "to", "if", "see", "This", "test", "this", "works"]
+  end
 end
