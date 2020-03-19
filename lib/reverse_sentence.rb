@@ -11,18 +11,18 @@ def reverse_sentence(my_sentence)
   while i < my_sentence.length
 
     if my_sentence[i] == " " 
-      new_arr << holder.join # ["Hello"]
-      new_arr << " "   # ["Hello", " "]
-      holder = [] # empty array for the next word
+      new_arr << holder.join 
+      new_arr << " "   
+      holder = [] 
     else
       holder << my_sentence[i] 
     end
     i += 1
   end 
 
-  new_arr << holder.join # ["Hello", " ", "world"]
+  new_arr << holder.join 
 
- # creating the reversed string from the above array
+  # creating the reversed string from the above array
   k = new_arr.length - 1
   i = 0
   while k >= 0
@@ -35,12 +35,12 @@ def reverse_sentence(my_sentence)
     end
     k -= 1
   end
-# ["world", " ", "Hello"]
+  
   i = 0
   new_sentence = new_arr.join
 
   while i < new_sentence.length
-    my_sentence[i] = new_sentence[i] #my_sentence at index 0 is replaced by new_sentence at index 0
+    my_sentence[i] = new_sentence[i] 
     i += 1
   end
   return my_sentence
