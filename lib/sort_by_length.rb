@@ -9,13 +9,13 @@ def sort_by_length(my_sentence)
 
   return [] if my_sentence.length == 0
   arr = my_sentence.split(" ")
-  i = 0
+  i   = 0
   while i < arr.length - 1
     min = i
     j   = i+1
     while j < arr.length
       min = j if arr[j].length < arr[min].length
-      j += 1
+      j  += 1
     end
     if min != i
       temp     = arr[min]
