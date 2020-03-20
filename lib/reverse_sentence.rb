@@ -1,6 +1,6 @@
 # A method to reverse the words in a sentence, in place.
 # Time complexity: O(n^2) - There are two outer loops, which is 2n, drop the 2, so n. Inside the second loop, there is a nested loop for each if statement, which makes ie O(n^2)
-# Space complexity: O(1) - the amount and size of variables is the same regardless of the input
+# Space complexity: O(1) - the amount and sizet of variables is the same regardless of the input
 def reverse_sentence(my_sentence)
   return [] if my_sentence == nil
 
