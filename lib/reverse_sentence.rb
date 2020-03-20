@@ -1,6 +1,6 @@
 # A method to reverse the words in a sentence, in place.
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n)
+# Space complexity: O(n^2)
 def reverse_sentence(my_sentence)
   return my_sentence unless my_sentence.class == String
   
