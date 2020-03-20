@@ -8,7 +8,7 @@ def sort_by_length(my_sentence)
   x = 0
   while x < sentence_array.length - 1 do 
     y = 0
-    while y < (sentence_array.length - 1) do
+    while y < (sentence_array.length - x - 1) do
       if sentence_array[y].length > sentence_array[y+1].length
         holder = sentence_array[y]
         sentence_array[y] = sentence_array[y+1]

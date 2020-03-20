@@ -1,13 +1,12 @@
 # A method to reverse the words in a sentence, in place.
-# Time complexity: ?
-# Space complexity: ?
-
+# Time complexity: O(n^2) in the worst case scenario and O(n) in the best case. But since we always consider the worst case, it's O(n^2).
+# Space complexity: O(1) No matter the sentence, one array gets made, that eventually gets converted back into a string.
 
 def reverse_sentence(my_sentence)
   
   return nil if my_sentence == nil
     
-  my_sentence = my_sentence.split
+  my_sentence = my_sentence.split(/(\s)/)
   last_index = my_sentence.length - 1
   x = 0
   until x == my_sentence.length/2
@@ -27,6 +26,5 @@ def reverse_sentence(my_sentence)
     end
     
   end
-  return my_sentence.join(" ")
+  return my_sentence.join
 end
-
