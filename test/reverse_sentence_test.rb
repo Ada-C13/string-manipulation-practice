@@ -7,7 +7,7 @@ describe "reverse sentence" do
 
       reverse_sentence(test_string)
 
-      test_string.must_equal "world hello,"
+      expect(test_string).must_equal "world hello,"
     end
 
     it "reverse a sentence with three words" do
@@ -15,7 +15,7 @@ describe "reverse sentence" do
 
       reverse_sentence(test_string)
 
-      test_string.must_equal "awesome! is Yoda"
+      expect(test_string).must_equal "awesome! is Yoda"
     end
   end
 
@@ -27,7 +27,7 @@ describe "reverse sentence" do
 
       reverse_sentence(test_string)
 
-      test_string.must_be_empty
+      expect(test_string).must_be_empty
     end
 
     # if the parameter is an object, check for nil
@@ -36,7 +36,7 @@ describe "reverse sentence" do
 
       reverse_sentence(test_string)
 
-      test_string.must_be_nil
+      expect(test_string).must_be_nil
     end
 
     it "reverse a sentence with one word" do
@@ -44,7 +44,7 @@ describe "reverse sentence" do
 
       reverse_sentence(test_string)
 
-      test_string.must_equal "world"
+      expect(test_string).must_equal "world"
     end
 
     it "reverse a sentence with multiple words" do
@@ -52,7 +52,7 @@ describe "reverse sentence" do
 
       reverse_sentence(test_string)
 
-      test_string.must_equal "yesterday. was I than today engineer better a I'm"
+      expect(test_string).must_equal "yesterday. was I than today engineer better a I'm"
     end
 
     it "reverse a sentence with multiple spaces between words" do
@@ -60,7 +60,7 @@ describe "reverse sentence" do
 
       reverse_sentence(test_string)
 
-      test_string.must_equal "apples?      them     like   you  do  How"
+      expect(test_string).must_equal "apples?      them     like   you  do  How"
     end
 
     it "reverse a sentence with preceeding and trailing white spaces" do
@@ -68,7 +68,7 @@ describe "reverse sentence" do
 
       reverse_sentence(test_string)
 
-      test_string.must_equal "     this! do can I  "
+      expect(test_string).must_equal "     this! do can I  "
     end
   end
 end
