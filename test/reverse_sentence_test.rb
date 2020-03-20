@@ -47,6 +47,14 @@ describe "reverse sentence" do
       test_string.must_equal "world"
     end
 
+    it "reverses the alphabet" do
+      test_string = "abcdefghijklmnopqrstuvwxyz"
+
+      reverse_sentence(test_string)
+
+      test_string.must_equal "zyxwvutsrqponmlkjihgfedcba"
+    end
+
     it "reverse a sentence with multiple words" do
       test_string = "I'm a better engineer today than I was yesterday."
 
