@@ -10,21 +10,10 @@ def reverse_sentence(my_sentence)
   last_index = my_sentence.length - 1
   x = 0
   until x == my_sentence.length/2
-    if my_sentence.length.even? 
-      holder = my_sentence[x]
-      my_sentence[x] = my_sentence[last_index - x]
-      my_sentence[last_index - x] = holder
-      x += 1
-    elsif my_sentence.length.odd? 
-      middle_index = my_sentence.length / 2
-      while x < middle_index
-        holder2 = my_sentence[x]
-        my_sentence[x] = my_sentence[last_index - x]
-        my_sentence[last_index - x] = holder2
-        x += 1
-      end
-    end
-    
+    holder = my_sentence[x]
+    my_sentence[x] = my_sentence[last_index - x]
+    my_sentence[last_index - x] = holder
+    x += 1
   end
   return my_sentence.join
 end
