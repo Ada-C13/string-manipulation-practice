@@ -4,11 +4,20 @@
 # Space complexity: ?
 
 def sort_by_length(my_sentence)
-  # Insertion sort method because it performs best out of the three when working with small arrays, and the test arrays are small
-  # Start at index i = 1 to length -1
-  # Loop from j = i down to 1
-  # If array[ j ] > array[ j - 1 ]
-  # Swap them
-  # j = j - 1
-  # Else break out of the loop
+  return [] if my_sentence.empty?
+
+  words = my_sentence.split(/\s/)
+  i = 1 
+  while i < words.length
+    j = i - 1
+    while j > 0 && words[j] > words[i]
+      temp = words[j]
+      words[j] = words[i]
+      words[i] = temp
+      j -= 1
+    end
+    i += 1
+  end
+
+  return words
 end
