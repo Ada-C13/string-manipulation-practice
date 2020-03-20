@@ -23,29 +23,21 @@ end
 
 
 
-# I need to find index (5 & 9)
-# str[5] # => "!" 
-# str[9] # => "t"
-
 def reverse_sentence(my_sentence)
   return nil if my_sentence.nil?
-  my_sentence = reverse(my_sentence)  # "     !siht od nac I  " 
+  my_sentence = reverse(my_sentence) 
   
   first = 0
   last = 0 
 
   while last < my_sentence.length 
     if my_sentence[first] != " " 
-      # p first # => 5
 
       until my_sentence[last] == " " || last == my_sentence.length
         last += 1
       end 
-      # p last # => 10
- 
 
-      # p my_sentence[first..last - 1] # => "!siht"
-      reverse_word = reverse(my_sentence[first..last - 1])  # => "this!"
+      reverse_word = reverse(my_sentence[first..last - 1])  # => from "!siht" to "this!"
 
       my_sentence = my_sentence.gsub(my_sentence[first...last], reverse_word)  # => "     this! od nac I  "
     end 
