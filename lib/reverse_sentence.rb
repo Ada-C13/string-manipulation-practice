@@ -4,6 +4,7 @@
 def reverse_sentence(my_sentence)
   return my_sentence if my_sentence.nil? || my_sentence.empty?
   
+  split_sentence = my_sentence.split(/[\s]/)
   first_index = 0
   last_index = my_sentence.length - 1
 
@@ -15,7 +16,12 @@ def reverse_sentence(my_sentence)
     last_index -= 1
   end
 
-  return split_sentence
+  find_spaces = []
+  my_sentence.length.times do |index|
+    find_space << index if /\s/.match(my_sentence[index])
+  end
+  
+  return my_sentence
 end
 
 # Hello world => dlrow olleH => world Hello
