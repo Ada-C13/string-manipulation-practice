@@ -9,7 +9,7 @@ In this method you will take a string as a parameter.  The method will return an
 In this assignment, you'll design and implement one of the well-known string manipulation methods.
 Remember that a string is an array of characters. Algorithms that worked on restricted arrays will work on strings as well.
 
-## Exercise
+## Optional Exercise
 
 * Design and implement a method to reverse the words in a sentence *in place*. The string of words to be reversed in passed in as the input parameter to the method.
   * Your algorithm should strive to optimize the space complexity as much as possible.
