@@ -1,4 +1,4 @@
-require_relative "test_helper"
+require_relative "./test_helper"
 
 describe "sort_by_length" do
   it "will return an empty array for an empty string" do
