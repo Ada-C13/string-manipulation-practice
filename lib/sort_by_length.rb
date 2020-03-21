@@ -7,13 +7,13 @@ def sort_by_length(my_sentence)
   return [] if my_sentence.empty?
 
   words = my_sentence.split(/\s/)
-  i = 1 
-  while i < words.length
-    j = i - 1
-    while j > 0 && words[j] > words[i]
+  i = 1
+  while i < words.length 
+    j = i
+    while j > 0 && words[j-1].length > words[j].length
       temp = words[j]
-      words[j] = words[i]
-      words[i] = temp
+      words[j] = words[j-1]
+      words[j-1] = temp
       j -= 1
     end
     i += 1
