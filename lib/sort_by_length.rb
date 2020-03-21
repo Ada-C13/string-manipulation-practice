@@ -8,7 +8,6 @@ def sort_by_length(my_sentence)
 
   i = 0
   while i < length
-    to_insert = array[i]
     j = 0
     # search in the sorted portion of the array
     # for the correct position to insert array[i]
