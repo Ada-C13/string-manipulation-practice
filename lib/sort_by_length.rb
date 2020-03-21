@@ -27,5 +27,3 @@ def sort_by_length(my_sentence)
 
   return man
 end
-
-# Could use selection sort to sort by ascending value 

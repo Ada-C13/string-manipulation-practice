@@ -1,4 +1,3 @@
-# A method to reverse the words in a sentence, in place.
 # Time complexity: O(n)
 # Space complexity: O(n)
 
