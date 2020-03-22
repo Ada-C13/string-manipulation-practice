@@ -1,5 +1,7 @@
 # A method to reverse the words in a sentence, in place.
-# Time complexity: O(n) because we're going through my_sentence twice but as separate processes
+# Time complexity: O(n) because method reverse_range is O(n) due to the single times loop through the collection, 
+# and we call reverse_range as many times as needed but the calls aren't nested and the number of calls made 
+# is independent of the size of the collection
 # Space complexity: O(n), no new structures created or maintained
 def reverse_sentence(my_sentence)
   return my_sentence if my_sentence == nil
