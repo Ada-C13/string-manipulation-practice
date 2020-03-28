@@ -17,6 +17,14 @@ describe "reverse sentence" do
 
       expect(reverse_string).must_equal "awesome! is Yoda"
     end
+
+    it "reverse a sentence with five words" do
+      test_string = "the cat ate the rat"
+
+      reverse_string = reverse_sentence(test_string)
+
+      expect(reverse_string).must_equal "rat the ate cat the"
+    end
   end
 
   # check for edge cases
