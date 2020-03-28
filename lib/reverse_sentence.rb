@@ -1,6 +1,6 @@
 # A method to reverse the words in a sentence, in place.
 
-# Time complexity: O(n^2) => Because it loops 1 time in 'reverse' method depending on the input size, and it has a nested loop in 'reverse_sentence' method. Since a constant drops, it becomes O(n^2)
+# Time complexity: O(n) => Because it loops 1 time in 'reverse' method depending on the input size, and it loops 1 time in 'reverse_sentence' method. Since a constant drops, it becomes O(n)
 
 # Space complexity: O(1) => Because it does not create any extra array.
 
