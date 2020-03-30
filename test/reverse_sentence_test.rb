@@ -17,9 +17,15 @@ describe "reverse sentence" do
 
       test_string.must_equal "awesome! is Yoda"
     end
+
+    it "reverses a sentence surrounded by whitespace" do
+      test_string = " Picchu is the cutests "
+      reverse_sentence(test_string)
+      test_string.must_equal " cutests the is Picchu "
+    end
   end
 
-  # check for edge cases
+  #check for edge cases
   describe "edge cases" do
     # if it's a string parameter, check for empty
     it "reverse an empty sentence" do
