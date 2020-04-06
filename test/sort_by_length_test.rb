@@ -9,6 +9,11 @@ describe "sort_by_length" do
     expect(sort_by_length("I love Ada")).must_equal ["I", "Ada", "love"]
   end
 
+  it "will return an array of words by length with longer string" do
+    expect(sort_by_length("I adore Ada and my grandmother")).must_equal ["I", "my", "Ada", "and", "adore", "grandmother"]
+  end
+
+
   it "will return an array of words by length, words that are of equal length will appear in the order they appear" do
     expect(sort_by_length("words of equal length")).must_equal ["of", "words", "equal", "length"]
   end
