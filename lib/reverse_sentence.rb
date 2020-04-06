@@ -5,21 +5,16 @@ def reverse_sentence(my_sentence)
   return [] if my_sentence == nil
 
   # reverse entire sentence
-  first_char = my_sentence[0]
-  (my_sentence.length/2).times do |i|
-    my_sentence[i] = my_sentence[my_sentence.length - 1 - i]
-    my_sentence[my_sentence.length - 1 - i] = first_char
-    first_char = my_sentence[1 + i]
-  end
+  reverse(my_sentence.length - 1, 0, my_sentence[0], my_sentence)
 
   first_index = 0
   my_sentence.length.times do |i|
     first_character = my_sentence[first_index]
     # reverse the last word
     if i == my_sentence.length - 1
-      reverse_word(i, first_index, first_character, my_sentence)
+      reverse(i, first_index, first_character, my_sentence)
     elsif my_sentence[i] == " "
-      reverse_word(i - 1, first_index, first_character, my_sentence)
+      reverse(i - 1, first_index, first_character, my_sentence)
       # find new first_index
       first_index = i
       first_index += 1 until my_sentence[first_index] != " "
@@ -29,7 +24,7 @@ def reverse_sentence(my_sentence)
   return my_sentence
 end
 
-def reverse_word(last_index, first_index, first_character, my_sentence)
+def reverse(last_index, first_index, first_character, my_sentence)
   # add one to handle even and odd lengths
   loops = (last_index - first_index) / 2 + 1
   loops.times do |x|
